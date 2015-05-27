@@ -8,6 +8,7 @@
 ${message}
 	<form:form commandName="user" action="welcome" method="POST">
 		<form:input path="login" /><br/>
+		<form:password path="password"/><br/>
 		<form:button>Sing in</form:button>
 	</form:form>
 	

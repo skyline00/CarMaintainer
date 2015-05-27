@@ -32,10 +32,11 @@ public class UserDaoImpl implements UserDao {
 		Session session = this.sessionFactory.openSession();
 		Criteria criteria = session.createCriteria(User.class);
 		criteria.add(Restrictions.eq("login", login));
-
-		//User user = (User) criteria.uniqueResult();
-		//session.load(User.class, new String(login));
-        return (User) criteria.uniqueResult();
+		if ((User) criteria.uniqueResult() == null) {
+			return null;
+		} else {
+	        return (User) criteria.uniqueResult();			
+		}
 	}    
  
     @SuppressWarnings("unchecked")
