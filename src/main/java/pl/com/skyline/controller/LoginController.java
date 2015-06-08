@@ -26,7 +26,7 @@ public class LoginController {
 		
 		if (user != null) {
 			if (user.getPassword().equals(Util.hashMD5(u.getPassword()))) {
-				return new ModelAndView("welcome", "message", "WELCOME!" + user.getLogin());
+				return new ModelAndView("welcome", "message", "WELCOME " + user.getLogin() + "!");
 			}
 			return new ModelAndView("index", "message", "Incorrect password.");
 		} else {

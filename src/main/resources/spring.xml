@@ -8,7 +8,7 @@
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 		<property name="driverClassName" value="org.postgresql.Driver" />
-		<property name="url" value="jdbc:postgresql://localhost:5432/carmaintainer" />
+		<property name="url" value="jdbc:postgresql://192.168.210.208:5432/carmaintainer" />
 		<property name="username" value="szczechp" />
 		<property name="password" value="test123" />
 	</bean>
